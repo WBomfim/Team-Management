@@ -19,7 +19,7 @@ import javax.persistence.OneToMany;
 public class Time {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   private String nome;
 
@@ -36,7 +36,7 @@ public class Time {
     this.torcedores = new HashSet<>();
   }
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 

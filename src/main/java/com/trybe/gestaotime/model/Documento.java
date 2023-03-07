@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Documento {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   private String cpf;
 
@@ -20,7 +20,7 @@ public class Documento {
 
   private String numeroCbf;
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 

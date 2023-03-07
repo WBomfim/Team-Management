@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 public class Torcedor {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   private String nome;
 
@@ -26,7 +26,7 @@ public class Torcedor {
     this.times = new HashSet<>();
   }
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 
