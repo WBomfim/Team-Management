@@ -1,7 +1,6 @@
 package com.trybe.gestaotime.model;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,17 +23,12 @@ public class Time {
   private String nome;
 
   @OneToMany(mappedBy = "time", cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-  private Set<Jogador> jogadores;
+  private List<Jogador> jogadores;
 
   @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
   @JoinTable(name = "time_torcedor", joinColumns = { @JoinColumn(name = "time_id") },
       inverseJoinColumns = { @JoinColumn(name = "torcedor_id") })
-  private Set<Torcedor> torcedores;
-
-  public Time() {
-    this.jogadores = new HashSet<>();
-    this.torcedores = new HashSet<>();
-  }
+  private List<Torcedor> torcedores;
 
   public Integer getId() {
     return id;
@@ -48,20 +42,20 @@ public class Time {
     this.nome = nome;
   }
 
-  public Set<Jogador> getJogadores() {
+  public List<Jogador> getJogadores() {
     return jogadores;
   }
 
-  public void setJogadores(Jogador jogador) {
-    this.jogadores.add(jogador);
+  public void setJogadores(List<Jogador> jogadores) {
+    this.jogadores = jogadores;
   }
 
-  public Set<Torcedor> getTorcedores() {
+  public List<Torcedor> getTorcedores() {
     return torcedores;
   }
 
-  public void setTorcedores(Torcedor torcedor) {
-    this.torcedores.add(torcedor);
+  public void setTorcedores(List<Torcedor> torcedores) {
+    this.torcedores = torcedores;
   }
 
 }
