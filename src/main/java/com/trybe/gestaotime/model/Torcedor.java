@@ -1,5 +1,6 @@
 package com.trybe.gestaotime.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -21,6 +22,10 @@ public class Torcedor {
 
   @ManyToMany(mappedBy = "torcedores")
   private Set<Time> times;
+
+  public Torcedor() {
+    this.times = new HashSet<>();
+  }
 
   public Long getId() {
     return id;

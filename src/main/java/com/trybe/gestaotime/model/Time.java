@@ -1,5 +1,6 @@
 package com.trybe.gestaotime.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -30,6 +31,11 @@ public class Time {
   @JoinTable(name = "time_torcedor", joinColumns = { @JoinColumn(name = "time_id") },
       inverseJoinColumns = { @JoinColumn(name = "torcedor_id") })
   private Set<Torcedor> torcedores;
+
+  public Time() {
+    this.jogadores = new HashSet<>();
+    this.torcedores = new HashSet<>();
+  }
 
   public Long getId() {
     return id;
