@@ -23,7 +23,8 @@ public class Jogador {
 
   private String posicao;
 
-  @OneToOne(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+  @OneToOne(mappedBy = "id", cascade =
+      CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
   @JoinColumn(name = "documento_id")
   private Documento documento;
 
