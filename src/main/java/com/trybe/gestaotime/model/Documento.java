@@ -16,7 +16,7 @@ public class Documento {
 
   private String cpf;
 
-  private String numeroDaCdt;
+  private String numeroCarteiraTrabalho;
 
   private String numeroCbf;
 
@@ -32,12 +32,12 @@ public class Documento {
     this.cpf = cpf;
   }
 
-  public String getNumeroDaCdt() {
-    return numeroDaCdt;
+  public String getNumeroCarteiraTrabalho() {
+    return numeroCarteiraTrabalho;
   }
 
-  public void setNumeroDaCdt(String numeroDaCdt) {
-    this.numeroDaCdt = numeroDaCdt;
+  public void setNumeroCarteiraTrabalho(String numeroCarteiraTrabalho) {
+    this.numeroCarteiraTrabalho = numeroCarteiraTrabalho;
   }
 
   public String getNumeroCbf() {
