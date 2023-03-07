@@ -38,7 +38,7 @@ public abstract class GenericDao<T, I extends Serializable> {
     em.close();
   }
 
-  public void deletar(Long id, Class<T> classe) {
+  public void deletar(Integer id, Class<T> classe) {
     EntityManager em = emf.createEntityManager();
     em.getTransaction().begin();
     T entity = em.find(classe, id);
@@ -47,7 +47,7 @@ public abstract class GenericDao<T, I extends Serializable> {
     em.close();
   }
 
-  public T pegar(Long id, Class<T> classe) {
+  public T pegar(Integer id, Class<T> classe) {
     EntityManager em = emf.createEntityManager();
     T entity = em.find(classe, id);
     em.close();
