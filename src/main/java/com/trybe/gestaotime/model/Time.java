@@ -22,10 +22,10 @@ public class Time {
 
   private String nome;
 
-  @OneToMany(mappedBy = "time", cascade = CascadeType.ALL)
+  @OneToMany
   private List<Jogador> jogadores;
 
-  @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+  @ManyToMany
   @JoinTable(name = "time_torcedor", joinColumns = { @JoinColumn(name = "time_id") },
       inverseJoinColumns = { @JoinColumn(name = "torcedor_id") })
   private List<Torcedor> torcedores;
