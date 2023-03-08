@@ -22,7 +22,7 @@ public class Time {
 
   private String nome;
 
-  @OneToMany(mappedBy = "time", cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+  @OneToMany(mappedBy = "time", cascade = CascadeType.ALL)
   private List<Jogador> jogadores;
 
   @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })

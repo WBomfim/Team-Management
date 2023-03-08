@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Run",
+      "request": "launch",
+      "mainClass": "com.trybe.gestaotime.Run",
+      "projectName": "gestao-time"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
