@@ -5,14 +5,32 @@ package com.trybe.gestaotime.dao;
  **/
 
 public class AplicacaoBD {
+  private TimeDao timeDao;
+  private JogadorDao jogadorDao;
+  private TorcedorDao torcedorDao;
+  private DocumentoDao documentoDao;
 
-  /**
-   * Atributos.
-   **/
+  public AplicacaoBD() {
+    this.timeDao = new TimeDao();
+    this.jogadorDao = new JogadorDao();
+    this.torcedorDao = new TorcedorDao();
+    this.documentoDao = new DocumentoDao();
+  }
 
+  public TimeDao timeDao() {
+    return timeDao;
+  }
 
-  /**
-   * Métodos.
-   **/
+  public JogadorDao jogadorDao() {
+    return jogadorDao;
+  }
+
+  public TorcedorDao torcedorDao() {
+    return torcedorDao;
+  }
+
+  public DocumentoDao documentoDao() {
+    return documentoDao;
+  }
 
 }
